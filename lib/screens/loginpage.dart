@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, sized_box_for_whitespace
 import 'package:flutter/material.dart';
+import 'package:projeto_epsa/screens/sign-up-page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key, required this.title}) : super(key: key);
@@ -15,20 +16,43 @@ class _MyHomePageState extends State<LoginPage> {
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.only(
-          top: 60,
+          top: 40,
           left: 40,
           right: 40,
         ),
-        color: Color.fromARGB(255, 255, 255, 255),
+        // decoration: BoxDecoration(
+        //   gradient: LinearGradient(
+        //     begin: Alignment.topRight,
+        //     end: Alignment.bottomLeft,
+        //     colors: [
+        //       Color.fromARGB(255, 0, 217, 255),
+        //       Color.fromARGB(255, 188, 235, 253),
+        //       Color.fromARGB(255, 255, 246, 195),
+        //       Color.fromARGB(255, 255, 191, 53),
+        //     ],
+        //   ),
+        // ),
         child: ListView(
           children: <Widget>[
+            Center(
+              child: Text(
+                'Login',
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 27,
+                    color: Colors.black54),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
             SizedBox(
               width: 180,
               height: 180,
               child: Image.asset('assets/images/logo.png'),
             ),
             SizedBox(
-              height: 30,
+              height: 25,
             ),
             TextFormField(
               keyboardType: TextInputType.emailAddress,
@@ -78,11 +102,19 @@ class _MyHomePageState extends State<LoginPage> {
               height: 60,
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
-                border: Border.all(
-                    color: Color.fromARGB(255, 0, 0, 0),
-                    width: 1.0,
-                    style: BorderStyle.solid), //Border.all
-
+                // border: Border.all(
+                //     color: Color.fromARGB(255, 0, 0, 0),
+                //     width: 1.0,
+                //     style: BorderStyle.solid), //Border.all
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  stops: [0.3, 1],
+                  colors: [
+                    Color.fromARGB(255, 255, 119, 0),
+                    Color.fromARGB(255, 255, 132, 24),
+                  ],
+                ),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(10.0),
                   topRight: Radius.circular(10.0),
@@ -101,7 +133,7 @@ class _MyHomePageState extends State<LoginPage> {
                     spreadRadius: 2.0,
                   ), //BoxShadow
                   BoxShadow(
-                    color: Color.fromARGB(255, 245, 90, 43),
+                    color: Color.fromARGB(255, 255, 132, 24),
                     offset: const Offset(0.0, 0.0),
                     blurRadius: 0.0,
                     spreadRadius: 0.0,
@@ -149,10 +181,10 @@ class _MyHomePageState extends State<LoginPage> {
               height: 60,
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
-                border: Border.all(
-                    color: Color.fromARGB(255, 0, 0, 0),
-                    width: 1.0,
-                    style: BorderStyle.solid), //Border.all
+                // border: Border.all(
+                //     color: Color.fromARGB(255, 0, 0, 0),
+                //     width: 1.0,
+                //     style: BorderStyle.solid), //Border.all
 
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(10.0),
@@ -214,22 +246,22 @@ class _MyHomePageState extends State<LoginPage> {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 20,
             ),
             Container(
-              height: 40,
+              height: 60,
               child: FlatButton(
                 child: Text(
                   "Cadastre-se",
                   textAlign: TextAlign.center,
                 ),
                 onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => SignupPage(),
-                  //   ),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SignupPage(),
+                    ),
+                  );
                 },
               ),
             ),
