@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, sized_box_for_whitespace
 import 'package:flutter/material.dart';
+import 'package:projeto_epsa/screens/pet-sign-up-page.dart';
 import 'package:projeto_epsa/screens/sign-up-page.dart';
 
 class LoginPage extends StatefulWidget {
@@ -164,12 +165,14 @@ class _MyHomePageState extends State<LoginPage> {
                     ],
                   ),
                   onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => HomePage(),
-                    //   ),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PetSignUp(
+                          title: '',
+                        ),
+                      ),
+                    );
                   },
                 ),
               ),

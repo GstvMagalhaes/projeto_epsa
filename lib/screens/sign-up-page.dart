@@ -3,7 +3,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
+// import 'package:image_picker/image_picker.dart';
 
 class SignupPage extends StatefulWidget {
   SignupPage({Key? key}) : super(key: key);
@@ -13,15 +13,15 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
-  File? arquivo;
-  final picker = ImagePicker();
+  // File? arquivo;
+  // final picker = ImagePicker();
 
-  Future getFileFromGallery() async {
-    final file = await picker.getImage(source: ImageSource.gallery);
-    if (file != null) {
-      setState(() => arquivo = File(file.path));
-    }
-  }
+  // Future getFileFromGallery() async {
+  //   final file = await picker.getImage(source: ImageSource.gallery);
+  //   if (file != null) {
+  //     setState(() => arquivo = File(file.path));
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -34,13 +34,13 @@ class _SignupPageState extends State<SignupPage> {
             SizedBox(
               width: 200,
               height: 200,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child: Image.file(
-                  arquivo!,
-                  fit: BoxFit.cover,
-                ),
-              ),
+              // child: ClipRRect(
+              //   borderRadius: BorderRadius.circular(12),
+              //   child: Image.file(
+              //     arquivo!,
+              //     fit: BoxFit.cover,
+              //   ),
+              // ),
             ),
             Container(
               height: 56,
@@ -66,13 +66,14 @@ class _SignupPageState extends State<SignupPage> {
               ),
               child: SizedBox.expand(
                 child: FlatButton(
-                  child: Icon(
-                    Icons.add,
-                    color: Colors.white,
-                    size: 20,
-                  ),
-                  onPressed: () => getFileFromGallery(),
-                ),
+                    child: Icon(
+                      Icons.add,
+                      color: Colors.white,
+                      size: 20,
+                    ),
+                    onPressed: () {}
+                    // => getFileFromGallery(),
+                    ),
               ),
             ),
             SizedBox(
