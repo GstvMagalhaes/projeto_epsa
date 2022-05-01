@@ -52,19 +52,19 @@ class _MyPetProfileSignUpState extends State<PetProfileSignUp> {
               ),
               child: SizedBox(
                 width: 550,
-                height: 550,
+                height: 800,
                 child: Padding(
                   padding: const EdgeInsets.only(
-                      top: 75, right: 30, left: 30, bottom: 50),
+                      top: 100, right: 30, left: 30, bottom: 50),
                   child: TextFormField(
                     // autofocus: true,
                     keyboardType: TextInputType.text,
                     decoration: InputDecoration(
                       labelText: "Nome do Pet",
                       labelStyle: TextStyle(
-                        color: Colors.black38,
-                        fontWeight: FontWeight.w200,
-                        fontSize: 15,
+                        color: Colors.black54,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 17,
                       ),
                     ),
                     style: TextStyle(fontSize: 18),
@@ -119,36 +119,178 @@ class _MyPetProfileSignUpState extends State<PetProfileSignUp> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 340.0, left: 30, right: 30),
+            padding: const EdgeInsets.only(top: 360.0, left: 30, right: 30),
             child: TextFormField(
               keyboardType: TextInputType.datetime,
               decoration: InputDecoration(
                 labelText: "Data de Nascimento",
                 labelStyle: TextStyle(
-                  color: Colors.black38,
-                  fontWeight: FontWeight.w200,
-                  fontSize: 15,
+                  color: Colors.black54,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 17,
                 ),
               ),
               style: TextStyle(fontSize: 18),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 410.0, left: 30, right: 30),
+            padding: const EdgeInsets.only(top: 430.0, left: 30, right: 30),
             child: TextFormField(
               // autofocus: true,
               keyboardType: TextInputType.text,
               decoration: InputDecoration(
                 labelText: "Raça",
                 labelStyle: TextStyle(
-                  color: Colors.black38,
-                  fontWeight: FontWeight.w200,
-                  fontSize: 15,
+                  color: Colors.black54,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 17,
                 ),
               ),
               style: TextStyle(fontSize: 18),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.only(top: 500.0, left: 30, right: 30),
+            child: TextFormField(
+              keyboardType: TextInputType.text,
+              decoration: InputDecoration(
+                labelText: "Pelagem",
+                labelStyle: TextStyle(
+                  color: Colors.black54,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 17,
+                ),
+              ),
+              style: TextStyle(fontSize: 18),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 570.0, left: 30, right: 30),
+            child: TextFormField(
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                labelText: "Peso",
+                labelStyle: TextStyle(
+                  color: Colors.black54,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 17,
+                ),
+              ),
+              style: TextStyle(fontSize: 18),
+            ),
+          ),
+          // Center(
+          //   child: Padding(
+          //     padding: const EdgeInsets.only(top: 60.0, right: 200),
+          //     child: FloatingActionButton.extended(
+          //       backgroundColor: Color.fromARGB(255, 16, 190, 0),
+          //       onPressed: () {},
+          //       icon: Icon(Icons.check),
+          //       label: Text("Cadastrar"),
+          //     ),
+          //   ),
+          // ),
+          Padding(
+            padding: const EdgeInsets.only(top: 620.0, right: 200),
+            child: Center(
+              child: Container(
+                height: 50.0,
+                child: RaisedButton(
+                  onPressed: () {},
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0)),
+                  padding: EdgeInsets.all(0.0),
+                  child: Ink(
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            Color.fromARGB(255, 0, 156, 13),
+                            Color.fromARGB(255, 0, 209, 17)
+                          ],
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                        ),
+                        borderRadius: BorderRadius.circular(30.0)),
+                    child: Container(
+                      constraints:
+                          BoxConstraints(maxWidth: 150.0, minHeight: 50.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Cadastrar",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 0, 0, 0),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 620.0, left: 200),
+            child: Center(
+              child: Container(
+                height: 50.0,
+                child: RaisedButton(
+                  onPressed: () {},
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0)),
+                  padding: EdgeInsets.all(0.0),
+                  child: Ink(
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            Color.fromARGB(255, 187, 1, 1),
+                            Color.fromARGB(255, 243, 0, 0)
+                          ],
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                        ),
+                        borderRadius: BorderRadius.circular(30.0)),
+                    child: Container(
+                      constraints:
+                          BoxConstraints(maxWidth: 150.0, minHeight: 50.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Cancelar",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 0, 0, 0),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          // Center(
+          //   child: FloatingActionButton.extended(
+          //     label: Text('Cadastrar'), // <-- Text
+          //     backgroundColor: Color.fromARGB(255, 56, 177, 0),
+          //     icon: Icon(
+          //       // <-- Icon
+          //       Icons.check,
+          //       size: 24.0,
+          //     ),
+          //     onPressed: () {},
+          //   ),
+          // ),
+          // Center(
+          //   child: FloatingActionButton.extended(
+          //     label: Text('Cancelar'), // <-- Text
+          //     backgroundColor: Color.fromARGB(255, 226, 0, 0),
+          //     icon: Icon(
+          //       // <-- Icon
+          //       Icons.block,
+          //       size: 24.0,
+          //     ),
+          //     onPressed: () {},
+          //   ),
+          // ),
         ],
       ),
     );

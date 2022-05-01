@@ -50,49 +50,47 @@ class _MyPetSignUpState extends State<PetSignUp> {
                 ),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 8.0),
-              child: SizedBox(
-                width: 100,
-                height: 550,
-                child: Container(
-                  child: Padding(
-                    padding: const EdgeInsets.only(bottom: 50.0),
-                    child: Stack(
-                      children: [
-                        Center(
-                          child: Text(
-                            'Clique no + para adicionar um pet',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 20,
-                            ),
-                          ),
+            SizedBox(
+              height: 50,
+            ),
+            SizedBox(
+              height: 600,
+              child: Container(
+                child: Stack(
+                  children: [
+                    Center(
+                      child: Text(
+                        'Clique no + para adicionar um pet',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 20,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 180.0, top: 400),
-                          child: FloatingActionButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => PetProfileSignUp(
-                                    title: '',
-                                  ),
-                                ),
-                              );
-                            },
-                            child: Icon(Icons.add),
-                            backgroundColor: Color.fromARGB(255, 121, 235, 255),
-                          ),
-                        )
-                      ],
+                      ),
                     ),
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: Color.fromARGB(255, 255, 180, 82),
-                  ),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 300.0),
+                        child: FloatingActionButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PetProfileSignUp(
+                                  title: '',
+                                ),
+                              ),
+                            );
+                          },
+                          child: Icon(Icons.add),
+                          backgroundColor: Color.fromARGB(255, 121, 235, 255),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: Color.fromARGB(255, 255, 180, 82),
                 ),
               ),
             ),
