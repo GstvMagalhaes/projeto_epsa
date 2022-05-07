@@ -1,12 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, deprecated_member_use
-
+import '../controllers/pet_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
 import 'pet-sign-up-page.dart';
 
 class PetProfileSignUp extends StatefulWidget {
-  const PetProfileSignUp({Key? key, required this.title}) : super(key: key);
+  PetProfileSignUp({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
@@ -14,6 +13,16 @@ class PetProfileSignUp extends StatefulWidget {
 }
 
 class _MyPetProfileSignUpState extends State<PetProfileSignUp> {
+
+  var controller;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    controller = PetController();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -196,7 +205,9 @@ class _MyPetProfileSignUpState extends State<PetProfileSignUp> {
               child: Container(
                 height: 50.0,
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+
+                  },
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0)),
                   padding: EdgeInsets.all(0.0),

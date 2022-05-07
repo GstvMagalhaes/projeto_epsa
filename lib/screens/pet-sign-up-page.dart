@@ -2,18 +2,34 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:projeto_epsa/models/pet.dart';
+import 'package:projeto_epsa/screens/pet_page.dart';
+import '../controllers/pet_controller.dart';
 
 import 'pet-profile-sign-up.dart';
 
 class PetSignUp extends StatefulWidget {
   const PetSignUp({Key? key, required this.title}) : super(key: key);
   final String title;
+  
 
   @override
   State<PetSignUp> createState() => _MyPetSignUpState();
 }
 
 class _MyPetSignUpState extends State<PetSignUp> {
+
+  //CONTROLADOR DAS TABELAS DOS PETS
+  var controller;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    controller = PetController();
+
+  }
+  
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +74,9 @@ class _MyPetSignUpState extends State<PetSignUp> {
               child: Container(
                 child: Stack(
                   children: [
-                    Center(
+                    //LISTA DOS PERFIS DOS PETS
+                    Visibility(
+                      replacement: Center(
                       child: Text(
                         'Clique no + para adicionar um pet',
                         style: TextStyle(
@@ -67,11 +85,35 @@ class _MyPetSignUpState extends State<PetSignUp> {
                         ),
                       ),
                     ),
+                      visible: controller.tabela.isNotEmpty,
+                      child: ListView.separated( 
+                      itemCount: controller.tabela.length, 
+                      itemBuilder: (BuildContext context, int pet){
+                        final List<Pet> tabela = controller.tabela;
+                        return ListTile(
+                          leading: Image.asset("assets/images/pata_icon.png"), //Image.network(tabela[i].foto),
+                          title: Text(tabela[pet].nome),
+                          trailing: Text(tabela[pet].tipo),
+                        
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (_) => PetPage(key: Key(tabela[pet].nome), pet: tabela[pet],)
+                          ));
+                        },
+                        );
+                      }, 
+                      separatorBuilder: (_,__) => Divider(),
+                      padding: EdgeInsets.all(16),
+                    ),
+                    ),
+                    
+                    
                     Center(
                       child: Padding(
                         padding: const EdgeInsets.only(top: 300.0),
                         child: FloatingActionButton(
                           onPressed: () {
+
                             Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -99,4 +141,6 @@ class _MyPetSignUpState extends State<PetSignUp> {
       ),
     );
   }
+
+
 }
