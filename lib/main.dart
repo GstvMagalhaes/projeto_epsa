@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:projeto_epsa/screens/pet-profile-sign-up.dart';
+import 'package:projeto_epsa/screens/pet-sign-up-page.dart';
 import 'screens/loginpage.dart';
 
 void main() => runApp(MyApp());
