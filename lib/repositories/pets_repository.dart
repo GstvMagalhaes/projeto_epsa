@@ -14,23 +14,23 @@ class PetsRepository {
   PetsRepository(){
     _pets.addAll([
       Pet(
-      foto: "https://firebasestorage.googleapis.com/v0/b/pets-b3a82.appspot.com/o/atletico-mg.png?alt=media&token=7dfc49bd-e2ca-4fdf-968c-3cc7d95251a3",
+      foto: "https://avatars.githubusercontent.com/u/38079926?v=4",
       nome: "Billy", 
       tipo: "Cachorro",
 
     ),
       Pet(
-      foto: "https://firebasestorage.googleapis.com/v0/b/pets-b3a82.appspot.com/o/pata_icon.png?alt=media&token=d00dc8c3-a224-4321-80cd-82f177ebb33c",
+      foto: "https://avatars.githubusercontent.com/u/50676424?v=4",
       nome: "Bolt", 
       tipo: "Cachorro",
     ),
       Pet(
-      foto: "https://firebasestorage.googleapis.com/v0/b/pets-b3a82.appspot.com/o/pata_icon.png?alt=media&token=d00dc8c3-a224-4321-80cd-82f177ebb33c",
+      foto: "https://avatars.githubusercontent.com/u/99221052?v=4",
       nome: "Meno", 
       tipo: "Cachorro",
     ),
       Pet(
-      foto: "https://firebasestorage.googleapis.com/v0/b/pets-b3a82.appspot.com/o/pata_icon.png?alt=media&token=d00dc8c3-a224-4321-80cd-82f177ebb33c",
+      foto: "https://pps.whatsapp.net/v/t61.24694-24/261233290_294140406193771_647377230361946642_n.jpg?ccb=11-4&oh=242eb3e0185b8391e509a662f4a6adcd&oe=628AFD55",
       nome: "Junin", 
       tipo: "Cachorro",
     ),

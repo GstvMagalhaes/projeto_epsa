@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/pet.dart';
+import '../repositories/pets_repository.dart';
 
 
 class PetPage extends StatefulWidget {
@@ -11,6 +12,7 @@ class PetPage extends StatefulWidget {
 }
 
 class _PetPageState extends State<PetPage> {
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -39,9 +41,9 @@ class _PetPageState extends State<PetPage> {
             children: [
               Padding(padding: EdgeInsets.all(24), child: CircleAvatar(
                 radius: 75,
-                backgroundImage: AssetImage("assets/images/avatardog.png"),
-                
-                ),)
+                backgroundImage: NetworkImage(widget.pet.foto),
+                ),
+                ),
             ],
           ),
           Container(),

@@ -91,7 +91,10 @@ class _MyPetSignUpState extends State<PetSignUp> {
                       itemBuilder: (BuildContext context, int pet){
                         final List<Pet> tabela = controller.tabela;
                         return ListTile(
-                          leading: Image.asset("assets/images/pata_icon.png"), //Image.network(tabela[i].foto),
+                          leading: CircleAvatar(
+                            radius: 20,
+                            backgroundImage: NetworkImage(tabela[pet].foto),
+                          ), //Image.network(tabela[i].foto),
                           title: Text(tabela[pet].nome),
                           trailing: Text(tabela[pet].tipo),
                         
