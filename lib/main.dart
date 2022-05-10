@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.cyan),
       home: LoginPage(
-        title: '',
+        title: ' ',
       ),
     );
   }
